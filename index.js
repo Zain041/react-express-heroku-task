@@ -8,9 +8,9 @@ const authRoutes = require ('./routes/auth');
 var cors = require('cors');
 app.use(cors()); //allowing Access-Control-Allow-Origin cors for access from client
 const db = require('./config/database');
-app.get('/',(req,res)=>{
-	res.send("ello")
-})
+// app.get('/',(req,res)=>{
+// 	res.send("ello")
+// })
 
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
