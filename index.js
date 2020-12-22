@@ -34,7 +34,7 @@ if(process.env.NODE_ENV === 'PRODUCTION'){
 app.use(express.static(path.join(__dirname,'client','build')));
 
 app.get('/',(req,res)=>{
-	res.sendFile(path.join(__dirname,'client','build'));
+	res.sendFile(path.join(__dirname,'client','build','index.html'));
 })
 
 const port =  4000;
