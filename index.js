@@ -27,14 +27,12 @@ app.use(express.json());
 app.use('/api/todos', todos);
 app.use('/api',authRoutes);
 
-if(process.env.NODE_ENV === 'PRODUCTION'){
-	app.use(express.static('client/build'))
-}
 
-app.use(express.static(path.join(__dirname,'client','build')));
+
+app.use(express.static(path.join(__dirname,'./client','build')));
 
 app.get('/',(req,res)=>{
-	res.sendFile(path.join(__dirname,'client','build','index.html'));
+	res.sendFile(path.join(__dirname,'./client','build','index.html'));
 })
 
 const port =  4000;
