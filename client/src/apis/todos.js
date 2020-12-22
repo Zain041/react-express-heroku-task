@@ -1,5 +1,5 @@
 import axios from 'axios';
-const api = 'http://localhost:4000/api/todos';
+const api = 'http://localhost:5000/api/todos';
 // Get all data
 export const getAll = () =>
     axios.get(api)

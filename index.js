@@ -15,7 +15,7 @@ const db = require('./config/database');
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 // Connect to mongoose
-mongoose.connect(process.env.MONGODB_URI||'mongodb+srv://zaini:235896abc@cluster0.rhk32.mongodb.net/todos?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://zaini:235896abc@cluster0.rhk32.mongodb.net/todos?retryWrites=true&w=majority', {
 	//   useMongoClient: true
 }).then(() => console.log('MongoDB Connected...'))
 .catch(err => console.log(err));
@@ -31,11 +31,11 @@ if(process.env.NODE_ENV === 'PRODUCTION'){
 	app.use(express.static('client/build'))
 }
 
-app.use(express.static(path.join(__dirname,' ./client','build')));
+app.use(express.static(path.join(__dirname,'client','build')));
 
-app.get('/',(req,res)=>{
-	res.sendFile(path.join(__dirname,'./client','build','index.html'));
+app.get('*',(req,res)=>{
+	res.sendFile(path.join(__dirname,'client','build'));
 })
 
-const port = process.env.PORT || 4000;
+const port =  4000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
