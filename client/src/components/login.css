@@ -1,0 +1,24 @@
+.login-card{
+    border-radius: 10px;
+}
+.login-header{
+    border-radius: 10px;
+    
+}
+.button{
+    border:1px solid rgb(37, 189, 37);
+    color:rgb(37, 189, 37);
+    width:100px;
+    text-align: center;
+    background-color: white;
+}
+.div-button{
+    text-align: center;
+    margin-top: 10px;
+}
+.button:hover{
+    background-color: rgb(37, 189, 37);
+    color:white;
+    font-weight: bold;
+    transition:ease-out;
+}

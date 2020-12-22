@@ -1,0 +1,17 @@
+.container-fluid{
+  height:100vh;
+  width:100%;
+  
+  
+}
+.header{
+  margin-bottom: 5px;
+}
+.App{
+  margin-bottom: 5px;
+}
+.todo-heading{
+text-align: center;
+color: white;
+
+}

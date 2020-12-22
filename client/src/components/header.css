@@ -1,0 +1,13 @@
+.logo{
+    height:150px;
+    width:150px;
+}
+.menu-item{
+    color:white;
+    opacity:0.5;
+}
+.menu-item:hover{
+    color:white;
+    opacity:1;
+    text-decoration: none;
+}
